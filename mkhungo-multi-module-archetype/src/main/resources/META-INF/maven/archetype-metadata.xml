@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+                           http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        name="custom-archetype">
+
+    <requiredProperties>
+        <requiredProperty key="groupId">
+            <defaultValue>za.co.example</defaultValue>
+            <validationRegex>^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+[0-9a-z_]$</validationRegex>
+        </requiredProperty>
+        <requiredProperty key="artifactId">
+            <defaultValue>multi-module-demo</defaultValue>
+            <validationRegex>^[a-z]+(-[a-z0-9]+)*$</validationRegex>
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>0.0.1-SNAPSHOT</defaultValue>
+            <validationRegex>^\d+\.\d+\.\d+(-[A-Z]+)?$</validationRegex>
+        </requiredProperty>
+    </requiredProperties>
+    <modules>
+        <module name="core" id="core" dir="core"/>
+        <module name="common" id="common" dir="common"/>
+        <module name="web-app" id="web-app" dir="web-app"/>
+        <module name="web-service" id="web-service" dir="web-service"/>
+    </modules>
+</archetype-descriptor>

@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>za.co.mkhungo</groupId>
+  <artifactId>mkhungo-rest-archetype</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <url>https://your-url.com</url>
+
+  <packaging>maven-archetype</packaging>
+  <name>mkhungo-rest-archetype</name>
+
+  <dependencies>
+  </dependencies>
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.3.0</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
+          <executions>
+            <execution>
+              <id>archetype-one</id>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+              <phase>package</phase>
+              <configuration>
+                <executable>mvn</executable>
+                <arguments>
+                  <argument>archetype:generate</argument>
+                  <argument>-DarchetypeGroupId=${project.groupId}</argument>
+                  <argument>-DarchetypeArtifactId=${project.artifactId}</argument>
+                  <argument>-DarchetypeVersion=${project.version}</argument>
+                  <argument>-DgroupId=${project.groupId}</argument>
+                  <argument>-DartifactId=${project.artifactId}</argument>
+                  <!--<argument>-Dpackage=${}</argument>-->
+                  <argument>-Dversion=${project.version}</argument>
+                  <argument>-DinteractiveMode=false</argument>
+                </arguments>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>mkhungo-rest-archetype ...</description>
+
+  <developers>
+    <developer>
+      <id>Noxolo.Mkhungo</id>
+      <email>NM@Mkhungo.co.za</email>
+      <name>Noxolo Mandisa Mkhungo</name>
+      <roles>
+        <role>Technical Architect</role>
+        <role>Software Engineer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license />
+  </licenses>
+
+  <scm />
+</project>

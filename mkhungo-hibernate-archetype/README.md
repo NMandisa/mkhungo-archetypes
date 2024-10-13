@@ -1,0 +1,1 @@
+# Mkhungo Hibernate Archetype

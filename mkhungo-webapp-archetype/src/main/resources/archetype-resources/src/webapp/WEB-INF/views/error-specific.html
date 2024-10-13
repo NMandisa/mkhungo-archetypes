@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org" th:lang="en">
+<title>Internal Server Error</title>
+<!--Header HTML-->
+<!--Navigation HTML-->
+<body>
+<div class="container">
+  <h1>Internal Server Error</h1>
+  <h3>Cause : <span th:text="${cause}"></span></h3>
+  <h3 th:text="${message}"></h3>
+  <div>
+    <h3>Trace</h3>
+    <br/>
+    <p th:text="${trace}"></p>
+  </div>
+</div>
+</body>
+<!--Footer HTML-->
+</html>

@@ -1,0 +1,1 @@
+# Mkhungo Spring Hibernate Archetype
